@@ -6,7 +6,7 @@ from PIL import Image
 from datetime import datetime
 
 # Konfigurasi
-ESP32_CAM_URL = "http://192.168.19.118:81/stream"  # Ganti sesuai IP ESP32-CAM kamu
+ESP32_CAM_URL = "http://192.168.102.219:81/stream"  # Ganti sesuai IP ESP32-CAM kamu
 UBIDOTS_TOKEN = "BBUS-ZYMsrjRHYXbLRigG1JqWtRBmjhpLls"
 DEVICE_LABEL = "phaethon"
 SAVE_DIR = "absensi_foto"
