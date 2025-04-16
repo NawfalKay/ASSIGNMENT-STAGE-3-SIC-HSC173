@@ -59,7 +59,7 @@ def mulai_absensi(nama_siswa, kelas):
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
             if not sudah_absen:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                filename = os.path.join(SAVE_DIR, f"{nama_siswa}_{kelas}_{timestamp}.jpg")
+                filename = os.path.join(SAVE_DIR, f"{nama_siswa}{kelas}{timestamp}.jpg")
                 cv2.imwrite(filename, frame)
                 foto_terambil = Image.open(filename)
                 if kirim_absen():
@@ -79,4 +79,4 @@ if st.button("Ambil Absen"):
     if nama_siswa and kelas:
         mulai_absensi(nama_siswa, kelas)
     else:
-        st.warning("⚠️ Harap isi Nama Siswa dan pilih Kelas terlebih dahulu!")
+        st.warning("⚠ Harap isi Nama Siswa dan pilih Kelas terlebih dahulu!")
